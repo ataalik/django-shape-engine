@@ -138,7 +138,7 @@ class BaseShapefileWriter(object):
                 return self._get_choice_value(item, field_name)
 
             if internal_type == "ForeignKey":
-                return unicode(getattr(item, field_name))
+                return str(getattr(item, field_name))
 
             if internal_type in ('DateTimeField', 'TimeField'):
                 return getattr(item, field_mapping.field_in.name).isoformat()
