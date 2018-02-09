@@ -91,7 +91,7 @@ class ShpResponder(object):
         zip.close()
 
     def zip_response(self, shapefile_path, file_name, mimetype, readme=None):
-        buffer = StringIO()
+        buffer = BytesIO()
         zip = zipfile.ZipFile(buffer, 'w', zipfile.ZIP_DEFLATED)
         files = ['shp', 'shx', 'prj', 'dbf']
         for item in files:
