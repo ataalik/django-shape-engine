@@ -95,7 +95,7 @@ except ImportError:
                                  DateTimeField: ogr.OFTDateTime}
 
 try:
-    from cStringIO import StringIO
+    from io import BytesIO
 except ImportError:
     from StringIO import StringIO
 
